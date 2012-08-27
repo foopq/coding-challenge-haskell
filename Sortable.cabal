@@ -1,0 +1,28 @@
+name: SortableCodingChallenge
+version: 0.0.1
+cabal-version: >=1.2
+build-type: Simple
+license: GPL-3
+license-file: "LICENSE"
+description: An answer to the Sortable coding challenge.
+data-dir: ""
+ 
+executable sortable
+    build-depends:  base -any, 
+                    containers -any, 
+                    deepseq -any, 
+                    json -any,
+                    mtl -any, 
+                    parallel -any, 
+                    split -any, 
+                    text -any
+    main-is: Main.hs
+    buildable: True
+    other-modules:  FinalMatching 
+                    Matching 
+                    Listing 
+                    Product
+                    InputDataCommon
+
+    ghc-options: -Wall -threaded -rtsopts -O2
+ 
